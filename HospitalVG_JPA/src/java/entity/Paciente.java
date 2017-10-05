@@ -199,6 +199,14 @@ public class Paciente implements Serializable {
     public void setEstpac(String estpac) {
         this.estpac = estpac;
     }
+    
+    public String getPaciente(){
+        switch (String.valueOf(this.sexpac)){
+            case "M": return "Masculino";
+            case "F": return "Femenino";
+            default: return "No Definido";
+        }
+    }
 
     @Override
     public int hashCode() {

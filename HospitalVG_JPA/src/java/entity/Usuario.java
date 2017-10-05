@@ -177,6 +177,18 @@ public class Usuario implements Serializable {
         this.levusu = levusu;
     }
     
+    public String getLevel(){
+        switch (Integer.parseInt(String.valueOf(this.levusu))){
+            case 1: 
+                return "Administrador";
+            case 2: 
+                return "Operativo";  
+            default:
+                return "Sin Privilegios";
+        }        
+    }
+    
+    
     @Override
     public int hashCode() {
         int hash = 0;

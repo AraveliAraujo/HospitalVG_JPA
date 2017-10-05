@@ -93,7 +93,7 @@
                             <f:facet name="header">
                                 <h:outputText value="Nivel"/>
                             </f:facet>
-                            <h:outputText value="#{item.levusu}"/>
+                            <h:outputText value="#{item.level}"/>
                         </p:column>
                         <f:facet name="footer">
                             <p:commandButton id="createButton" icon="ui-icon-plus"   value="#{vistas.Create}" actionListener="#{usuarioController.prepareCreate}" update=":UsuarioCreateForm" oncomplete="PF('UsuarioCreateDialog').show()"/>
