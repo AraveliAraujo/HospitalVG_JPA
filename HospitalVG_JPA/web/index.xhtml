@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+        <h:outputStylesheet name="css/jsfcrud.css"/>
+    </h:head>
+    <h:body>
+        <h:form>
+            <div id="top" class="top">
+                <ui:insert name="top">
+                    <p:growl id="growlid" showDetail="true"/>
+                    <p:panelGrid columns="2" id="pnlg">
+                        <p:outputLabel value="USUARIO"/>
+                        <p:inputText value="#{usuarioController.selected.usuusu}" required="true" requiredMessage="Ingresar usuario">
+                            <f:validateLength maximum="10" />
+                        </p:inputText>
+                        <p:outputLabel value="CONTRASEÑA"/>
+                        <p:inputText value="#{usuarioController.selected.pwdusu}" type="password" required="true" requiredMessage="Ingresar contraseña"/>
+                        <p:commandButton value="INGRESAR" actionListener="#{usuarioController.logeo()}" update="pnlg growlid"/>
+                    </p:panelGrid>
+                </ui:insert>
+            </div>
+
+            <div id="content" class="center_content">
+                <ui:insert name="content">
+                </ui:insert>
+            </div>
+        </h:form>
+    </h:body>
+</html>
+
