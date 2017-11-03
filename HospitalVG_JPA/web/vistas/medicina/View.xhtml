@@ -12,23 +12,23 @@
             <h:form id="MedicinaViewForm">
                 <h:panelGroup id="display">
                     <p:panelGrid columns="2" rendered="#{medicinaController.selected != null}">
-                        <h:outputText value="#{vistas.ViewMedicinaLabel_codmed}"/>
+                        <h:outputText value="Código"/>
                         <h:outputText value="#{medicinaController.selected.codmed}" title="#{vistas.ViewMedicinaTitle_codmed}"/>
-                        <h:outputText value="#{vistas.ViewMedicinaLabel_nomgenmed}"/>
+                        <h:outputText value="Nombre Genérico"/>
                         <h:outputText value="#{medicinaController.selected.nomgenmed}" title="#{vistas.ViewMedicinaTitle_nomgenmed}"/>
-                        <h:outputText value="#{vistas.ViewMedicinaLabel_nomcommed}"/>
+                        <h:outputText value="Nonbre Comercial"/>
                         <h:outputText value="#{medicinaController.selected.nomcommed}" title="#{vistas.ViewMedicinaTitle_nomcommed}"/>
-                        <h:outputText value="#{vistas.ViewMedicinaLabel_cosmed}"/>
+                        <h:outputText value="Costo"/>
                         <h:outputText value="#{medicinaController.selected.cosmed}" title="#{vistas.ViewMedicinaTitle_cosmed}"/>
-                        <h:outputText value="#{vistas.ViewMedicinaLabel_precmed}"/>
+                        <h:outputText value="Precio"/>
                         <h:outputText value="#{medicinaController.selected.precmed}" title="#{vistas.ViewMedicinaTitle_precmed}"/>
-                        <h:outputText value="#{vistas.ViewMedicinaLabel_premed}"/>
+                        <h:outputText value="Presentación"/>
                         <h:outputText value="#{medicinaController.selected.premed}" title="#{vistas.ViewMedicinaTitle_premed}"/>
-                        <h:outputText value="#{vistas.ViewMedicinaLabel_cantmed}"/>
+                        <h:outputText value="Cantidad"/>
                         <h:outputText value="#{medicinaController.selected.cantmed}" title="#{vistas.ViewMedicinaTitle_cantmed}"/>
-                        <h:outputText value="#{vistas.ViewMedicinaLabel_obsmed}"/>
+                        <h:outputText value="Observación"/>
                         <h:outputText value="#{medicinaController.selected.obsmed}" title="#{vistas.ViewMedicinaTitle_obsmed}"/>
-                        <h:outputText value="#{vistas.ViewMedicinaLabel_fchmed}"/>
+                        <h:outputText value="Fecha"/>
                         <h:outputText value="#{medicinaController.selected.fchmed}" title="#{vistas.ViewMedicinaTitle_fchmed}">
                             <f:convertDateTime pattern="MM/dd/yyyy" />
                         </h:outputText>

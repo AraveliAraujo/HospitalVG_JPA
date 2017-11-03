@@ -13,7 +13,7 @@
 
         <ui:define name="body">
             <h:form id="ProveedorListForm">
-                <p:panel header="#{vistas.ListProveedorTitle}">
+                <p:panel header="Tabla Proveedor">
                     <p:dataTable id="datalist" value="#{proveedorController.items}" var="item"
                                  selectionMode="single" selection="#{proveedorController.selected}"
                                  paginator="true"
@@ -27,55 +27,55 @@
 
                         <p:column>
                             <f:facet name="header">
-                                <h:outputText value="#{vistas.ListProveedorTitle_codprov}"/>
+                                <h:outputText value="Código"/>
                             </f:facet>
                             <h:outputText value="#{item.codprov}"/>
                         </p:column>
                         <p:column>
                             <f:facet name="header">
-                                <h:outputText value="#{vistas.ListProveedorTitle_nomprov}"/>
+                                <h:outputText value="Nombre"/>
                             </f:facet>
                             <h:outputText value="#{item.nomprov}"/>
                         </p:column>
                         <p:column>
                             <f:facet name="header">
-                                <h:outputText value="#{vistas.ListProveedorTitle_rucprov}"/>
+                                <h:outputText value="RUC"/>
                             </f:facet>
                             <h:outputText value="#{item.rucprov}"/>
                         </p:column>
                         <p:column>
                             <f:facet name="header">
-                                <h:outputText value="#{vistas.ListProveedorTitle_dirprov}"/>
+                                <h:outputText value="Dirección"/>
                             </f:facet>
                             <h:outputText value="#{item.dirprov}"/>
                         </p:column>
                         <p:column>
                             <f:facet name="header">
-                                <h:outputText value="#{vistas.ListProveedorTitle_tipprov}"/>
+                                <h:outputText value="Laboratorio - Distribuidor"/>
                             </f:facet>
                             <h:outputText value="#{item.tipprov}"/>
                         </p:column>
                         <p:column>
                             <f:facet name="header">
-                                <h:outputText value="#{vistas.ListProveedorTitle_telfprov}"/>
+                                <h:outputText value="Teléfono"/>
                             </f:facet>
                             <h:outputText value="#{item.telfprov}"/>
                         </p:column>
                         <p:column>
                             <f:facet name="header">
-                                <h:outputText value="#{vistas.ListProveedorTitle_comprov}"/>
+                                <h:outputText value="Nombre Comercial"/>
                             </f:facet>
                             <h:outputText value="#{item.comprov}"/>
                         </p:column>
                         <p:column>
                             <f:facet name="header">
-                                <h:outputText value="#{vistas.ListProveedorTitle_abrprov}"/>
+                                <h:outputText value="Abreviatura"/>
                             </f:facet>
                             <h:outputText value="#{item.abrprov}"/>
                         </p:column>
                         <p:column>
                             <f:facet name="header">
-                                <h:outputText value="#{vistas.ListProveedorTitle_ubigeo}"/>
+                                <h:outputText value="Código de Ubigeo"/>
                             </f:facet>
                             <h:outputText value="#{item.ubigeo}"/>
                         </p:column>

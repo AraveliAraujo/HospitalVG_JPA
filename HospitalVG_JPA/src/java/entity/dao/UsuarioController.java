@@ -1,5 +1,6 @@
 package entity.dao;
 
+import Services.Funciones;
 import entity.Usuario;
 import entity.dao.util.JsfUtil;
 import entity.dao.util.JsfUtil.PersistAction;
@@ -30,15 +31,17 @@ public class UsuarioController implements Serializable {
     private entity.controlador.UsuarioFacade ejbFacade;
     private List<Usuario> items = null;
     private Usuario selected;
+    private boolean inicio = true;
 
     @PostConstruct
-    public void inicio() {
+    public void inicios() {
         selected = new Usuario();
     }
 
     public void logeo() throws IOException {
         selected = ejbFacade.login(selected);
         if (selected == null) {
+            selected = new Usuario();
             FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Error", "Usuario y/o contraseña incorrecta"));
         } else {
             switch (Integer.parseInt(String.valueOf(selected.getLevusu()))) {
@@ -49,8 +52,38 @@ public class UsuarioController implements Serializable {
                     this.setTemplate("TemplateUser.xhtml");
                     break;
             }
-            FacesContext.getCurrentInstance().getExternalContext().redirect("faces/vistas/detventa/List.xhtml");
+            inicio = false;
         }
+    }
+
+    public void redirec() throws IOException {
+        try {
+            progress = null;
+            inicio = true;
+            FacesContext.getCurrentInstance().getExternalContext().redirect("faces/vistas/detventa/List.xhtml");
+        } catch (IOException e) {
+            throw e;
+        }
+    }
+
+    private Integer progress;
+
+    public Integer getProgress() {
+        if (progress == null) {
+            progress = 0;
+        } else {
+            progress = progress + (int) (Math.random() * 35);
+
+            if (progress > 100) {
+                progress = 100;
+            }
+        }
+
+        return progress;
+    }
+
+    public void setProgress(Integer progress) {
+        this.progress = progress;
     }
 
     private String Template;
@@ -94,8 +127,16 @@ public class UsuarioController implements Serializable {
 
     public Usuario prepareCreate() {
         selected = new Usuario();
-        initializeEmbeddableKey();
         return selected;
+    }
+
+    public void encriptarCrear() {
+        try {
+            selected.setPwdusu(Funciones.encriptar(selected.getPwdusu()));
+            create();
+        } catch (Exception e) {
+            throw e;
+        }
     }
 
     public void create() {
@@ -203,6 +244,14 @@ public class UsuarioController implements Serializable {
             }
         }
 
+    }
+
+    public boolean isInicio() {
+        return inicio;
+    }
+
+    public void setInicio(boolean inicio) {
+        this.inicio = inicio;
     }
 
 }

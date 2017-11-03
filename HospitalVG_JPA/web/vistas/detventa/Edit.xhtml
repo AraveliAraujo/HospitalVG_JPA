@@ -12,13 +12,13 @@
             <h:form id="DetventaEditForm">
                 <h:panelGroup id="display">
                     <p:panelGrid columns="2" rendered="#{detventaController.selected != null}">
-                        <p:outputLabel value="#{vistas.EditDetventaLabel_detventaPK_nummed}" for="detventaPK_nummed" />
+                        <p:outputLabel value="Código" for="detventaPK_nummed" />
                         <p:inputText id="detventaPK_nummed" value="#{detventaController.selected.detventaPK.nummed}" title="#{vistas.EditDetventaTitle_detventaPK_nummed}" required="true" requiredMessage="#{vistas.EditDetventaRequiredMessage_detventaPK_nummed}"/>
-                        <p:outputLabel value="#{vistas.EditDetventaLabel_detventaPK_ncodDoc}" for="detventaPK_ncodDoc" />
+                        <p:outputLabel value="Número del Documento" for="detventaPK_ncodDoc" />
                         <p:inputText id="detventaPK_ncodDoc" value="#{detventaController.selected.detventaPK.ncodDoc}" title="#{vistas.EditDetventaTitle_detventaPK_ncodDoc}" required="true" requiredMessage="#{vistas.EditDetventaRequiredMessage_detventaPK_ncodDoc}"/>
-                        <p:outputLabel value="#{vistas.EditDetventaLabel_cantvMed}" for="cantvMed" />
+                        <p:outputLabel value="Cantidad" for="cantvMed" />
                         <p:inputText id="cantvMed" value="#{detventaController.selected.cantvMed}" title="#{vistas.EditDetventaTitle_cantvMed}" />
-                        <p:outputLabel value="#{vistas.EditDetventaLabel_stotvDoc}" for="stotvDoc" />
+                        <p:outputLabel value="Stock" for="stotvDoc" />
                         <p:inputText id="stotvDoc" value="#{detventaController.selected.stotvDoc}" title="#{vistas.EditDetventaTitle_stotvDoc}" />
                     </p:panelGrid>
                     <p:commandButton actionListener="#{detventaController.update}" value="#{vistas.Save}" update="display,:DetventaListForm:datalist,:growl" oncomplete="handleSubmit(args, 'DetventaEditDialog');"/>

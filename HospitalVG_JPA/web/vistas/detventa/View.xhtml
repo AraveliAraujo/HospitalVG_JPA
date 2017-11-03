@@ -12,13 +12,13 @@
             <h:form id="DetventaViewForm">
                 <h:panelGroup id="display">
                     <p:panelGrid columns="2" rendered="#{detventaController.selected != null}">
-                        <h:outputText value="#{vistas.ViewDetventaLabel_detventaPK_nummed}"/>
+                        <h:outputText value="Código"/>
                         <h:outputText value="#{detventaController.selected.detventaPK.nummed}" title="#{vistas.ViewDetventaTitle_detventaPK_nummed}"/>
-                        <h:outputText value="#{vistas.ViewDetventaLabel_detventaPK_ncodDoc}"/>
+                        <h:outputText value="Númedo del Documento"/>
                         <h:outputText value="#{detventaController.selected.detventaPK.ncodDoc}" title="#{vistas.ViewDetventaTitle_detventaPK_ncodDoc}"/>
-                        <h:outputText value="#{vistas.ViewDetventaLabel_cantvMed}"/>
+                        <h:outputText value="Cantidad"/>
                         <h:outputText value="#{detventaController.selected.cantvMed}" title="#{vistas.ViewDetventaTitle_cantvMed}"/>
-                        <h:outputText value="#{vistas.ViewDetventaLabel_stotvDoc}"/>
+                        <h:outputText value="Stock"/>
                         <h:outputText value="#{detventaController.selected.stotvDoc}" title="#{vistas.ViewDetventaTitle_stotvDoc}"/>
                     </p:panelGrid>
                     <p:commandButton value="#{vistas.Close}" onclick="DetventaViewDialog.hide()"/>

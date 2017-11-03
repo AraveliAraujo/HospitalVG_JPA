@@ -12,6 +12,7 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -57,6 +58,7 @@ public class Usuario implements Serializable {
     @Column(length = 8)
     private String dniusu;
     @Temporal(TemporalType.DATE)
+    @Past(message = "El usuario se registra el mismo día o antes")
     private Date ingusu;
     @Size(max = 30)
     @Column(length = 30)
@@ -176,19 +178,18 @@ public class Usuario implements Serializable {
     public void setLevusu(Character levusu) {
         this.levusu = levusu;
     }
-    
-    public String getLevel(){
-        switch (Integer.parseInt(String.valueOf(this.levusu))){
-            case 1: 
+
+    public String getLevel() {
+        switch (Integer.parseInt(String.valueOf(this.levusu))) {
+            case 1:
                 return "Administrador";
-            case 2: 
-                return "Operativo";  
+            case 2:
+                return "Operativo";
             default:
                 return "Sin Privilegios";
-        }        
+        }
     }
-    
-    
+
     @Override
     public int hashCode() {
         int hash = 0;

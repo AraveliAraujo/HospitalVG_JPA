@@ -13,7 +13,7 @@
 
         <ui:define name="body">
             <h:form id="MedicinaListForm">
-                <p:panel header="#{vistas.ListMedicinaTitle}">
+                <p:panel header="Tabla Medicina">
                     <p:dataTable id="datalist" value="#{medicinaController.items}" var="item"
                                  selectionMode="single" selection="#{medicinaController.selected}"
                                  paginator="true"
@@ -27,55 +27,55 @@
 
                         <p:column>
                             <f:facet name="header">
-                                <h:outputText value="#{vistas.ListMedicinaTitle_codmed}"/>
+                                <h:outputText value="Código"/>
                             </f:facet>
                             <h:outputText value="#{item.codmed}"/>
                         </p:column>
                         <p:column>
                             <f:facet name="header">
-                                <h:outputText value="#{vistas.ListMedicinaTitle_nomgenmed}"/>
+                                <h:outputText value="Nombre Genérico"/>
                             </f:facet>
                             <h:outputText value="#{item.nomgenmed}"/>
                         </p:column>
                         <p:column>
                             <f:facet name="header">
-                                <h:outputText value="#{vistas.ListMedicinaTitle_nomcommed}"/>
+                                <h:outputText value="Nombre Comercial"/>
                             </f:facet>
                             <h:outputText value="#{item.nomcommed}"/>
                         </p:column>
                         <p:column>
                             <f:facet name="header">
-                                <h:outputText value="#{vistas.ListMedicinaTitle_cosmed}"/>
+                                <h:outputText value="Costo"/>
                             </f:facet>
                             <h:outputText value="#{item.cosmed}"/>
                         </p:column>
                         <p:column>
                             <f:facet name="header">
-                                <h:outputText value="#{vistas.ListMedicinaTitle_precmed}"/>
+                                <h:outputText value="Precio"/>
                             </f:facet>
                             <h:outputText value="#{item.precmed}"/>
                         </p:column>
                         <p:column>
                             <f:facet name="header">
-                                <h:outputText value="#{vistas.ListMedicinaTitle_premed}"/>
+                                <h:outputText value="Presentación"/>
                             </f:facet>
                             <h:outputText value="#{item.premed}"/>
                         </p:column>
                         <p:column>
                             <f:facet name="header">
-                                <h:outputText value="#{vistas.ListMedicinaTitle_cantmed}"/>
+                                <h:outputText value="Cantidad"/>
                             </f:facet>
                             <h:outputText value="#{item.cantmed}"/>
                         </p:column>
                         <p:column>
                             <f:facet name="header">
-                                <h:outputText value="#{vistas.ListMedicinaTitle_obsmed}"/>
+                                <h:outputText value="Observación"/>
                             </f:facet>
                             <h:outputText value="#{item.obsmed}"/>
                         </p:column>
                         <p:column>
                             <f:facet name="header">
-                                <h:outputText value="#{vistas.ListMedicinaTitle_fchmed}"/>
+                                <h:outputText value="Fecha"/>
                             </f:facet>
                             <h:outputText value="#{item.fchmed}">
                                 <f:convertDateTime pattern="MM/dd/yyyy" />
@@ -83,13 +83,13 @@
                         </p:column>
                         <p:column>
                             <f:facet name="header">
-                                <h:outputText value="#{vistas.ListMedicinaTitle_lotmed}"/>
+                                <h:outputText value="Lote"/>
                             </f:facet>
                             <h:outputText value="#{item.lotmed}"/>
                         </p:column>
                         <p:column>
                             <f:facet name="header">
-                                <h:outputText value="#{vistas.ListMedicinaTitle_codprov}"/>
+                                <h:outputText value="Código de Proveedor"/>
                             </f:facet>
                             <h:outputText value="#{item.codprov}"/>
                         </p:column>

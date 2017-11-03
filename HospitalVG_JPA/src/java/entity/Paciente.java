@@ -19,6 +19,7 @@ import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
+import org.hibernate.validator.constraints.Email;
 
 /**
  *
@@ -81,6 +82,7 @@ public class Paciente implements Serializable {
     private String telfpac;
     @Size(max = 30)
     @Column(length = 30)
+    @Email(message = "Corregir el correo ingresado")
     private String emailpac;
     @Size(max = 11)
     @Column(length = 11)

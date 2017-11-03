@@ -12,13 +12,13 @@
             <h:form id="UbigeoEditForm">
                 <h:panelGroup id="display">
                     <p:panelGrid columns="2" rendered="#{ubigeoController.selected != null}">
-                        <p:outputLabel value="#{vistas.EditUbigeoLabel_ubigeo}" for="ubigeo" />
+                        <p:outputLabel value="UBIGEO" for="ubigeo" />
                         <p:inputText id="ubigeo" value="#{ubigeoController.selected.ubigeo}" title="#{vistas.EditUbigeoTitle_ubigeo}" required="true" requiredMessage="#{vistas.EditUbigeoRequiredMessage_ubigeo}"/>
-                        <p:outputLabel value="#{vistas.EditUbigeoLabel_dpto}" for="dpto" />
+                        <p:outputLabel value="DEPARTAMENTO" for="dpto" />
                         <p:inputText id="dpto" value="#{ubigeoController.selected.dpto}" title="#{vistas.EditUbigeoTitle_dpto}" />
-                        <p:outputLabel value="#{vistas.EditUbigeoLabel_prov}" for="prov" />
+                        <p:outputLabel value="PROVINCIA" for="prov" />
                         <p:inputText id="prov" value="#{ubigeoController.selected.prov}" title="#{vistas.EditUbigeoTitle_prov}" />
-                        <p:outputLabel value="#{vistas.EditUbigeoLabel_dist}" for="dist" />
+                        <p:outputLabel value="DISTRITO" for="dist" />
                         <p:inputText id="dist" value="#{ubigeoController.selected.dist}" title="#{vistas.EditUbigeoTitle_dist}" />
                     </p:panelGrid>
                     <p:commandButton actionListener="#{ubigeoController.update}" value="#{vistas.Save}" update="display,:UbigeoListForm:datalist,:growl" oncomplete="handleSubmit(args, 'UbigeoEditDialog');"/>

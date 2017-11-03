@@ -12,23 +12,23 @@
             <h:form id="DocVentaViewForm">
                 <h:panelGroup id="display">
                     <p:panelGrid columns="2" rendered="#{docVentaController.selected != null}">
-                        <h:outputText value="#{vistas.ViewDocVentaLabel_ncodDoc}"/>
+                        <h:outputText value="Código"/>
                         <h:outputText value="#{docVentaController.selected.ncodDoc}" title="#{vistas.ViewDocVentaTitle_ncodDoc}"/>
-                        <h:outputText value="#{vistas.ViewDocVentaLabel_numDoc}"/>
+                        <h:outputText value="Número del Documento"/>
                         <h:outputText value="#{docVentaController.selected.numDoc}" title="#{vistas.ViewDocVentaTitle_numDoc}"/>
-                        <h:outputText value="#{vistas.ViewDocVentaLabel_tipDoc}"/>
+                        <h:outputText value="Documento"/>
                         <h:outputText value="#{docVentaController.selected.tipDoc}" title="#{vistas.ViewDocVentaTitle_tipDoc}"/>
-                        <h:outputText value="#{vistas.ViewDocVentaLabel_fchingDoc}"/>
+                        <h:outputText value="Ingreso del Documento"/>
                         <h:outputText value="#{docVentaController.selected.fchingDoc}" title="#{vistas.ViewDocVentaTitle_fchingDoc}">
                             <f:convertDateTime pattern="MM/dd/yyyy" />
                         </h:outputText>
-                        <h:outputText value="#{vistas.ViewDocVentaLabel_montDoc}"/>
+                        <h:outputText value="Monto"/>
                         <h:outputText value="#{docVentaController.selected.montDoc}" title="#{vistas.ViewDocVentaTitle_montDoc}"/>
-                        <h:outputText value="#{vistas.ViewDocVentaLabel_dondoc}"/>
+                        <h:outputText value="Donación"/>
                         <h:outputText value="#{docVentaController.selected.dondoc}" title="#{vistas.ViewDocVentaTitle_dondoc}"/>
-                        <h:outputText value="#{vistas.ViewDocVentaLabel_obsDoc}"/>
+                        <h:outputText value="Observación"/>
                         <h:outputText value="#{docVentaController.selected.obsDoc}" title="#{vistas.ViewDocVentaTitle_obsDoc}"/>
-                        <h:outputText value="#{vistas.ViewDocVentaLabel_codpac}"/>
+                        <h:outputText value="Código Paciente"/>
                         <h:outputText value="#{docVentaController.selected.codpac}" title="#{vistas.ViewDocVentaTitle_codpac}"/>
                     </p:panelGrid>
                     <p:commandButton value="#{vistas.Close}" onclick="DocVentaViewDialog.hide()"/>

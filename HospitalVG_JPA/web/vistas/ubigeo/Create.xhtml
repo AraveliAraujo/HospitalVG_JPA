@@ -12,13 +12,13 @@
             <h:form id="UbigeoCreateForm">
                 <h:panelGroup id="display">
                     <p:panelGrid columns="2" rendered="#{ubigeoController.selected != null}">
-                        <p:outputLabel value="#{vistas.CreateUbigeoLabel_ubigeo}" for="ubigeo" />
+                        <p:outputLabel value="UBIGEO" for="ubigeo" />
                         <p:inputText id="ubigeo" value="#{ubigeoController.selected.ubigeo}" title="#{vistas.CreateUbigeoTitle_ubigeo}" required="true" requiredMessage="#{vistas.CreateUbigeoRequiredMessage_ubigeo}"/>
-                        <p:outputLabel value="#{vistas.CreateUbigeoLabel_dpto}" for="dpto" />
+                        <p:outputLabel value="DEPARTAMENTO" for="dpto" />
                         <p:inputText id="dpto" value="#{ubigeoController.selected.dpto}" title="#{vistas.CreateUbigeoTitle_dpto}" />
-                        <p:outputLabel value="#{vistas.CreateUbigeoLabel_prov}" for="prov" />
+                        <p:outputLabel value="PROVINCIA" for="prov" />
                         <p:inputText id="prov" value="#{ubigeoController.selected.prov}" title="#{vistas.CreateUbigeoTitle_prov}" />
-                        <p:outputLabel value="#{vistas.CreateUbigeoLabel_dist}" for="dist" />
+                        <p:outputLabel value="DISTRITO" for="dist" />
                         <p:inputText id="dist" value="#{ubigeoController.selected.dist}" title="#{vistas.CreateUbigeoTitle_dist}" />
                     </p:panelGrid>
                     <p:commandButton actionListener="#{ubigeoController.create}" value="#{vistas.Save}" update="display,:UbigeoListForm:datalist,:growl" oncomplete="handleSubmit(args,'UbigeoCreateDialog');"/>

@@ -27,7 +27,7 @@ public class UbigeoController implements Serializable {
     private entity.controlador.UbigeoFacade ejbFacade;
     private List<Ubigeo> items = null;
     private Ubigeo selected;
-
+    private List<Ubigeo> lstUbigeo;
     public UbigeoController() {
     }
 
@@ -77,9 +77,12 @@ public class UbigeoController implements Serializable {
     public List<Ubigeo> getItems() {
         if (items == null) {
             items = getFacade().findAll();
+            lstUbigeo = getFacade().findAll();
         }
         return items;
     }
+    
+    
 
     private void persist(PersistAction persistAction, String successMessage) {
         if (selected != null) {
@@ -161,5 +164,15 @@ public class UbigeoController implements Serializable {
         }
 
     }
+
+    public List<Ubigeo> getLstUbigeo() {
+        return lstUbigeo;
+    }
+
+    public void setLstUbigeo(List<Ubigeo> lstUbigeo) {
+        this.lstUbigeo = lstUbigeo;
+    }
+    
+    
 
 }

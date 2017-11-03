@@ -13,10 +13,10 @@
 
         <ui:define name="body">
             <h:form id="UbigeoListForm">
-                <p:panel header="#{vistas.ListUbigeoTitle}">
+                <p:panel header="Tabla Ubigeo">
                     <p:dataTable id="datalist" value="#{ubigeoController.items}" var="item"
                                  selectionMode="single" selection="#{ubigeoController.selected}"
-                                 paginator="true"
+                                 paginator="true" filteredValue="#{ubigeoController.lstUbigeo}"
                                  rowKey="#{item.ubigeo}"
                                  rows="10"
                                  rowsPerPageTemplate="10,20,30,40,50"
@@ -27,25 +27,25 @@
 
                         <p:column>
                             <f:facet name="header">
-                                <h:outputText value="#{vistas.ListUbigeoTitle_ubigeo}"/>
+                                <h:outputText value="UBIGEO"/>
                             </f:facet>
                             <h:outputText value="#{item.ubigeo}"/>
                         </p:column>
-                        <p:column>
+                        <p:column filterBy="#{item.dpto}" filterMatchMode="contains">
                             <f:facet name="header">
-                                <h:outputText value="#{vistas.ListUbigeoTitle_dpto}"/>
+                                <h:outputText value="DEPARTAMENTO"/>
                             </f:facet>
                             <h:outputText value="#{item.dpto}"/>
                         </p:column>
-                        <p:column>
+                        <p:column filterBy="#{item.prov}">
                             <f:facet name="header">
-                                <h:outputText value="#{vistas.ListUbigeoTitle_prov}"/>
+                                <h:outputText value="PROVINCIA"/>
                             </f:facet>
                             <h:outputText value="#{item.prov}"/>
                         </p:column>
-                        <p:column>
+                        <p:column filterBy="#{item.dist}">
                             <f:facet name="header">
-                                <h:outputText value="#{vistas.ListUbigeoTitle_dist}"/>
+                                <h:outputText value="DISTRITO"/>
                             </f:facet>
                             <h:outputText value="#{item.dist}"/>
                         </p:column>

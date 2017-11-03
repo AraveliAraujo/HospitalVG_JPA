@@ -12,23 +12,23 @@
             <h:form id="ProveedorViewForm">
                 <h:panelGroup id="display">
                     <p:panelGrid columns="2" rendered="#{proveedorController.selected != null}">
-                        <h:outputText value="#{vistas.ViewProveedorLabel_codprov}"/>
+                        <h:outputText value="Código"/>
                         <h:outputText value="#{proveedorController.selected.codprov}" title="#{vistas.ViewProveedorTitle_codprov}"/>
-                        <h:outputText value="#{vistas.ViewProveedorLabel_nomprov}"/>
+                        <h:outputText value="Nombre"/>
                         <h:outputText value="#{proveedorController.selected.nomprov}" title="#{vistas.ViewProveedorTitle_nomprov}"/>
-                        <h:outputText value="#{vistas.ViewProveedorLabel_rucprov}"/>
+                        <h:outputText value="RUC"/>
                         <h:outputText value="#{proveedorController.selected.rucprov}" title="#{vistas.ViewProveedorTitle_rucprov}"/>
-                        <h:outputText value="#{vistas.ViewProveedorLabel_dirprov}"/>
+                        <h:outputText value="Dirección"/>
                         <h:outputText value="#{proveedorController.selected.dirprov}" title="#{vistas.ViewProveedorTitle_dirprov}"/>
-                        <h:outputText value="#{vistas.ViewProveedorLabel_tipprov}"/>
+                        <h:outputText value="Laboratorio - Distribuidor"/>
                         <h:outputText value="#{proveedorController.selected.tipprov}" title="#{vistas.ViewProveedorTitle_tipprov}"/>
-                        <h:outputText value="#{vistas.ViewProveedorLabel_telfprov}"/>
+                        <h:outputText value="Teléfono"/>
                         <h:outputText value="#{proveedorController.selected.telfprov}" title="#{vistas.ViewProveedorTitle_telfprov}"/>
-                        <h:outputText value="#{vistas.ViewProveedorLabel_comprov}"/>
+                        <h:outputText value="Nombre Comercial"/>
                         <h:outputText value="#{proveedorController.selected.comprov}" title="#{vistas.ViewProveedorTitle_comprov}"/>
-                        <h:outputText value="#{vistas.ViewProveedorLabel_abrprov}"/>
+                        <h:outputText value="Abreviatura"/>
                         <h:outputText value="#{proveedorController.selected.abrprov}" title="#{vistas.ViewProveedorTitle_abrprov}"/>
-                        <h:outputText value="#{vistas.ViewProveedorLabel_ubigeo}"/>
+                        <h:outputText value="Código de Ubigeo"/>
                         <h:outputText value="#{proveedorController.selected.ubigeo}" title="#{vistas.ViewProveedorTitle_ubigeo}"/>
                     </p:panelGrid>
                     <p:commandButton value="#{vistas.Close}" onclick="ProveedorViewDialog.hide()"/>

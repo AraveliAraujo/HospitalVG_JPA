@@ -13,7 +13,7 @@
 
         <ui:define name="body">
             <h:form id="DetventaListForm">
-                <p:panel header="#{vistas.ListDetventaTitle}">
+                <p:panel header="Detalle de Venta">
                     <p:dataTable id="datalist" value="#{detventaController.items}" var="item"
                                  selectionMode="single" selection="#{detventaController.selected}"
                                  paginator="true"
@@ -27,25 +27,25 @@
 
                         <p:column>
                             <f:facet name="header">
-                                <h:outputText value="#{vistas.ListDetventaTitle_detventaPK_ncodDoc}"/>
+                                <h:outputText value="Código"/>
                             </f:facet>
                             <h:outputText value="#{item.detventaPK.ncodDoc}"/>
                         </p:column>
                         <p:column>
                             <f:facet name="header">
-                                <h:outputText value="#{vistas.ListDetventaTitle_detventaPK_nummed}"/>
+                                <h:outputText value="Número"/>
                             </f:facet>
                             <h:outputText value="#{item.detventaPK.nummed}"/>
                         </p:column>
                         <p:column>
                             <f:facet name="header">
-                                <h:outputText value="#{vistas.ListDetventaTitle_cantvMed}"/>
+                                <h:outputText value="Cantidad"/>
                             </f:facet>
                             <h:outputText value="#{item.cantvMed}"/>
                         </p:column>
                         <p:column>
                             <f:facet name="header">
-                                <h:outputText value="#{vistas.ListDetventaTitle_stotvDoc}"/>
+                                <h:outputText value="Stock"/>
                             </f:facet>
                             <h:outputText value="#{item.stotvDoc}"/>
                         </p:column>

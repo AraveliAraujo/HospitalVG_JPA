@@ -13,7 +13,7 @@
 
         <ui:define name="body">
             <h:form id="UsuarioListForm">
-                <p:panel header="#{vistas.ListUsuarioTitle}">
+                <p:panel header="Tabla Usuarios">
                     <p:dataTable id="datalist" value="#{usuarioController.items}" var="item"
                                  selectionMode="single" selection="#{usuarioController.selected}"
                                  paginator="true"
@@ -93,7 +93,7 @@
                             <f:facet name="header">
                                 <h:outputText value="Nivel"/>
                             </f:facet>
-                            <h:outputText value="#{item.level}"/>
+                            <h:outputText value="#{item.levusu}"/>
                         </p:column>
                         <f:facet name="footer">
                             <p:commandButton id="createButton" icon="ui-icon-plus"   value="#{vistas.Create}" actionListener="#{usuarioController.prepareCreate}" update=":UsuarioCreateForm" oncomplete="PF('UsuarioCreateDialog').show()"/>
