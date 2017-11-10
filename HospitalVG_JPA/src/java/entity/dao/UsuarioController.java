@@ -60,7 +60,7 @@ public class UsuarioController implements Serializable {
         try {
             progress = null;
             inicio = true;
-            FacesContext.getCurrentInstance().getExternalContext().redirect("faces/vistas/detventa/List.xhtml");
+            FacesContext.getCurrentInstance().getExternalContext().redirect("faces/principal.xhtml");
         } catch (IOException e) {
             throw e;
         }
